@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Adopta un Amigo - Animales</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <h1>Adopta un Amigo</h1>
+      <nav aria-label="Menú principal">
+        <ul class="nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="adopta.html" aria-current="page">Adopta un amigo</a></li>
+          <li><a href="contacto.html">Contáctanos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="main-content">
+    <h2>Animales disponibles</h2>
+    <p class="lead">Haz clic en "Más info" para ver detalles y en "Solicitar adopción" para completar el formulario.</p>
+
+    <section class="cards" aria-live="polite" aria-label="Lista de animales disponibles">
+      <!-- Card 1 -->
+      <article class="card" tabindex="0" aria-labelledby="name-1">
+        <img src="img/dog1.jpg" alt="Perro mestizo color marrón sentado" class="card-img">
+        <h3 id="name-1">Luna (Perra)</h3>
+        <p>Edad: 2 años · Tamaño: Mediano · Vacunada</p>
+        <p class="card-desc">Cariñosa y tranquila, ideal para familias.</p>
+        <div class="card-actions">
+          <button class="btn" data-animal="Luna" onclick="openAdoptForm(event)">Solicitar adopción</button>
+          <button class="btn secondary" onclick="showInfo('Luna', 'Perra, 2 años, vacunada. Excelente con niños.')">Más info</button>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card" tabindex="0" aria-labelledby="name-2">
+        <img src="img/cat1.jpg" alt="Gato atigrado tumbado" class="card-img">
+        <h3 id="name-2">Miso (Gato)</h3>
+        <p>Edad: 1 año · Tamaño: Pequeño · Esterilizado</p>
+        <p class="card-desc">Juguetón y curioso, busca hogar tranquilo.</p>
+        <div class="card-actions">
+          <button class="btn" data-animal="Miso" onclick="openAdoptForm(event)">Solicitar adopción</button>
+          <button class="btn secondary" onclick="showInfo('Miso', 'Gato atigrado, 1 año, esterilizado. Le gusta jugar.')">Más info</button>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card" tabindex="0" aria-labelledby="name-3">
+        <img src="img/dog2.jpg" alt="Perro pequeño de pelo blanco" class="card-img">
+        <h3 id="name-3">Kiko (Perro)</h3>
+        <p>Edad: 3 años · Tamaño: Pequeño · Vacunado</p>
+        <p class="card-desc">Muy activo, necesita ejercicio diario.</p>
+        <div class="card-actions">
+          <button class="btn" data-animal="Kiko" onclick="openAdoptForm(event)">Solicitar adopción</button>
+          <button class="btn secondary" onclick="showInfo('Kiko', 'Perro pequeño, 3 años, muy activo. Ideal persona activa.')">Más info</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- Adopt modal (hidden by default) -->
+    <div id="adopt-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-content">
+        <button class="close" aria-label="Cerrar" onclick="closeModal()">&times;</button>
+        <h3 id="modal-title">Solicitar adopción</h3>
+        <form id="adopt-form" onsubmit="submitAdoption(event)">
+          <label for="animal-name">Animal:</label>
+          <input id="animal-name" name="animal" readonly>
+          
+          <label for="full-name">Nombre completo:</label>
+          <input id="full-name" name="fullname" required>
+
+          <label for="phone">Teléfono / Whatsapp:</label>
+          <input id="phone" name="phone" required>
+
+          <label for="message">¿Por qué quieres adoptar?</label>
+          <textarea id="message" name="message" rows="3" required></textarea>
+
+          <button type="submit" class="btn">Enviar solicitud</button>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>Proyecto académico - Prototipo frontend accesible.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>

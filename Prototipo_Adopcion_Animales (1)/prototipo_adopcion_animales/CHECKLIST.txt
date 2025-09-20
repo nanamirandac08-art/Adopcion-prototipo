@@ -1,0 +1,9 @@
+LISTA DE CHEQUEO - Proyecto: Prototipo frontend (Adopta un Amigo)
+1. Construye el frontend cumpliendo con los requisitos del cliente. -> SI (25%)
+   Observación: Interfaz con Home, Lista de animales y Contacto. Accesible y navegable.
+2. Crea las interfaces del frontend utilizando HTML5, CSS3 y JS correctamente. -> SI (25%)
+   Observación: Código limpio y semántico; formularios y controles con labels.
+3. Construye correctamente las interfaces del frontend teniendo en cuenta los prototipos validados. -> SI (25%)
+   Observación: Diseño responsivo y foco visible para navegación por teclado.
+4. Prueba de forma adecuada el frontend de la aplicación. -> SI (25%)
+   Observación: Formularios con simulación de envío, modal con comportamiento y cierre con ESC.
